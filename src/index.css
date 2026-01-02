@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-slate-950 text-slate-100;
+  }
+
+  input, textarea, select {
+    @apply bg-slate-800 text-slate-100 border-slate-700;
+  }
+
+  input:focus, textarea:focus, select:focus {
+    @apply bg-slate-700/50 text-slate-100;
+  }
+}
+
+@layer components {
+  .glass-effect {
+    @apply bg-slate-800/40 backdrop-blur-xl border border-slate-700/50;
+  }
+
+  .card-elevated {
+    @apply bg-slate-800 border border-slate-700 shadow-2xl shadow-black/50;
+  }
+
+  .btn-primary {
+    @apply px-4 py-2.5 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all font-medium shadow-lg hover:shadow-xl hover:shadow-blue-500/20;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2.5 bg-slate-700 text-slate-100 rounded-lg hover:bg-slate-600 transition-colors font-medium border border-slate-600;
+  }
+
+  .input-field {
+    @apply px-4 py-2.5 bg-slate-800 border border-slate-700 rounded-lg text-slate-100 placeholder-slate-500 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all;
+  }
+
+  .badge-active {
+    @apply px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-500/20 text-emerald-400 border border-emerald-500/40;
+  }
+
+  .badge-archived {
+    @apply px-2.5 py-1 rounded-full text-xs font-medium bg-slate-700/50 text-slate-300 border border-slate-600/50;
+  }
+
+  .badge-replaced {
+    @apply px-2.5 py-1 rounded-full text-xs font-medium bg-amber-500/20 text-amber-400 border border-amber-500/40;
+  }
+}
